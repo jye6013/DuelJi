@@ -1,19 +1,11 @@
 package duel;
 
-
-
-
 public class Duel {
-
-	
 
 	private Dueler d1;
 	private Dueler d2;
 	
-	
-	
-	
-	public static void main(String[] args){
+		public static void main(String[] args){
 		Duel duel = new Duel();
 		duel.dukeItOut();
 	}
@@ -26,7 +18,5 @@ public class Duel {
 	public void dukeItOut(){
 		
 	}
-	
-
 }
 
