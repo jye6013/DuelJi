@@ -14,7 +14,6 @@ public class Duel {
 	
 	
 	
-	
 	public static void main(String[] args){
 		Duel duel = new Duel();
 		duel.dukeItOut();
