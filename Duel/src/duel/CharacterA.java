@@ -5,6 +5,12 @@ public class CharacterA implements Duel{
 	public CharacterA() {
 		
 	}
-	public void taunt();
-	public String getName();
+	
+	public void taunt() {
+		
+	}
+
+	public String getName();{
+		
+	}
 }
