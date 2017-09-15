@@ -1,18 +1,22 @@
 package duel;
 
-public class CharacterA implements Duel{
-
+public class CharacterA implements Duel {
+	
+	private String name;
+	
+	
 	public CharacterA() {
 		
-		private String name;
+		
 	}
 	
 	public void taunt() {
 		
 	}
 
-	public String getName();{
+	public String getName(){
 		name = "Ji";
 		return name;
 	}
 }
+
