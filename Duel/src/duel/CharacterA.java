@@ -14,7 +14,7 @@ public class CharacterA implements Duel {
 	
 		
 	}
-	//test
+	
 	public void taunt() {
 		
 	}
