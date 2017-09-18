@@ -26,7 +26,10 @@ public class CharacterA implements Dueler {
 	
 	
 	public int getAction(Object caller) {
-		
+		if (caller != Duel.d2)
+		{
+			return int (Math.random()*4);
+		}
 	}
 	
 }
