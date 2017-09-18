@@ -1,11 +1,14 @@
 package duel;
 
-public class CharacterB implements Duel{
+public class CharacterB implements Dueler{
 	
 	private String name;
 	
 	public CharacterB() {
-		
+		public String getName(){
+			name = "Jessica";
+			return name;
+		}
 		
 	}
 	
@@ -13,8 +16,5 @@ public class CharacterB implements Duel{
 		
 	}
 
-	public String getName(){
-		name = "Jessica";
-		return name;
-	}
+	
 }

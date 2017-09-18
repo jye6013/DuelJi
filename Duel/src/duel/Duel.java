@@ -1,11 +1,7 @@
 package duel;
 
-
-
-
 public class Duel {
 
-	
 
 	private Dueler d1;
 	private Dueler d2;

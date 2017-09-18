@@ -6,7 +6,10 @@ public class CharacterA implements Duel {
 	
 	
 	public CharacterA() {
-		
+		public String getName(){
+			name = "Ji";
+			return name;
+		}
 		
 	}
 	
@@ -14,9 +17,6 @@ public class CharacterA implements Duel {
 		
 	}
 
-	public String getName(){
-		name = "Ji";
-		return name;
-	}
+
 }
 
