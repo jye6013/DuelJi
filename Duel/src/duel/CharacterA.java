@@ -23,12 +23,9 @@ public class CharacterA implements Dueler {
 	}
 
 
-	public String getName(){
-		name = "Ji";
-		return name;
-	}
 	
-	public int d1LastAction() {
+	
+	public int getAction(Object caller) {
 		
 	}
 	

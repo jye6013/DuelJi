@@ -176,16 +176,7 @@ public class Duel {
 		return true;
 	}
 	
-	boolean determineIfOpponentIsFair(Dueler d, int hp) {
-		if (d == dueler1hp && dueler1hp >= hp)
-		{
-			return true;
-		}
-		if (d == dueler2hp && dueler2hp >= hp)
-		{
-			return true;
-		}
-	}
+
 	
 	public void pause(long time){
 		try {

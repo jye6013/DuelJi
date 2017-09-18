@@ -20,7 +20,7 @@ public class CharacterB implements Dueler{
 		return name;
 	}
 	
-	public int d2LastAction() {
+	public int getAction(Object caller) {
 		
 	}
 }
