@@ -32,5 +32,12 @@ public class CharacterA implements Dueler {
 		}
 	}
 	
+	public int hit(Object caller) {
+		if(caller instanceof Duel)
+		{
+			//newHp = whatever the variable for hp - 10; has to go to getHp();
+		}
+	}
+	
 }
 
