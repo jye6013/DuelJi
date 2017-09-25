@@ -18,7 +18,7 @@ public class CharacterA implements Dueler {
 
 	
 	public CharacterA() {
-	
+		loadedGun = false;
 	}
 	
 	

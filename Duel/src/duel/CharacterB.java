@@ -10,7 +10,7 @@ public class CharacterB implements Dueler {
 	private boolean loadedGun; 
 	
 	public CharacterB() {
-		
+		loadedGun = false;
 	}
 	
 		
