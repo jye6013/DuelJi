@@ -1,6 +1,6 @@
 package duel;
 
-public class CharacterA implements Dueler {
+public class CharacterA implements Dueler { 
 	
 	private String name;
 	//private String taunt;
