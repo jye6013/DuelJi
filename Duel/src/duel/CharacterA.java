@@ -1,6 +1,6 @@
 package duel;
 
-public class CharacterA implements Dueler {
+public class CharacterA implements Duel {
 	
 	private String name;
 	private String taunt;
@@ -9,8 +9,6 @@ public class CharacterA implements Dueler {
 	"Why don't you try something else?"};
 	
 	public CharacterA() {
-
-		
 	
 	}
 	
