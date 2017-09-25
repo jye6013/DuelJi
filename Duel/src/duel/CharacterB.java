@@ -1,10 +1,10 @@
 package duel;
 
-public class CharacterB implements Duel{
+public class CharacterB implements Duel {
 	
 	private String name;
 	private String taunt;
-	private boolean loadedGun;
+
 	private String tauntArray[] = {"Too weak for me.", "Similar to a child!", "Can't defeat me!", 
 	"Try something else since that won't work"};
 	
@@ -41,16 +41,16 @@ public class CharacterB implements Duel{
 	public int getAction(Object caller) {
 		if (caller instanceof Duel) //duel is calling it
 		{
-			if(loadedGun == true && Math.random() < .5) //is gun loaded? and 50% chance
+			if(d2loaded == true && Math.random() < .5) //is gun loaded? and 50% chance
 			{
-				loadedGun = false; //shoot the gun then it unloads
+				d2loaded = false; //shoot the gun then it unloads
 				return Duel.SHOOTING;
 			}
 			else
 			{
-				if(!loadedGun && Math.random() < .4) //gun not loaded and 40% chance
+				if(!d2loaded && Math.random() < .4) //gun not loaded and 40% chance
 				{
-					loadedGun = true;//loaded gun
+					d2loaded = true;//loaded gun
 					return Duel.LOADING;
 					
 				}
@@ -63,7 +63,18 @@ public class CharacterB implements Duel{
 		else
 		{
 			return Duel.YEAH_RIGHT;
-			return int (Math.random()*3); //random move
+			
+			if(!d2loaded && Math.random() < .4) //gun not loaded and 40% chance
+			{
+				d2loaded = true;//loaded gun
+				return Duel.LOADING;
+				
+			}
+			else
+			{
+				return Duel.GUARDING;
+			}
+			
 		}
 		
 	}

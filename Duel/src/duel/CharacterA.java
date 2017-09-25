@@ -4,9 +4,10 @@ public class CharacterA implements Duel {
 	
 	private String name;
 	private String taunt;
-	private boolean loadedGun;
+
 	private String tauntArray[] = {"Can't defeat me.", "Try again!", "You're too weak.", 
 	"Why don't you try something else?"};
+
 	
 	public CharacterA() {
 	
@@ -45,16 +46,16 @@ public class CharacterA implements Duel {
 	{
 		if (caller instanceof Duel) //duel is calling it
 		{
-			if(loadedGun == true && Math.random() < .5) //is gun loaded? and 50% chance
+			if(d1loaded == true && Math.random() < .5) //is gun loaded? and 50% chance
 			{
-				loadedGun = false; //shoot the gun then it unloads
+				d1loaded = false; //shoot the gun then it unloads
 				return Duel.SHOOTING;
 			}
 			else
 			{
-				if(!loadedGun && Math.random() < .4) //gun not loaded and 40% chance
+				if(!d1loaded && Math.random() < .4) //gun not loaded and 40% chance
 				{
-					loadedGun = true;//loaded gun
+					d1loaded = true;//loaded gun
 					return Duel.LOADING;
 					
 				}
@@ -67,7 +68,15 @@ public class CharacterA implements Duel {
 		else
 		{
 			return Duel.YEAH_RIGHT;
-			return int (Math.random()*3); //random move
+			if(!d1loaded && Math.random() < .4) //gun not loaded and 40% chance
+			{
+				d1loaded = true;//loaded gun
+				return Duel.LOADING;
+				
+			}
+			else
+			{
+				return Duel.GUARDING;
 		}
 	}
 	
