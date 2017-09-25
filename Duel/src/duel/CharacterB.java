@@ -1,21 +1,21 @@
 package duel;
 
-public class CharacterB implements Dueler{
-	
+public class CharacterB implements Dueler {
 	private String name;
 	private String taunt;
-	private boolean loadedGun;
+	private int hp;
 	private String tauntArray[] = {"Too weak for me.", "Similar to a child!", "Can't defeat me!", 
 	"Try something else since that won't work"};
 	
-	public CharacterB() {
+	private boolean loadedGun; 
 	
+	public CharacterB() {
 		
 	}
 	
-	static int randomNum = Math.random()*4;
 		
 	public void taunt() {
+		int randomNum = (int) (Math.random()*4);
 		System.out.println(tauntArray[randomNum]);
 	}
 
@@ -33,16 +33,20 @@ public class CharacterB implements Dueler{
 	}
 	
 	public boolean determineIfOpponentIsFair (Dueler d, int hp) {
-		if (d.getHp == hp)
+		if (d.getHP() == hp)
 		{
 			return true; 
+		}
+		else
+		{
+			return false; 
 		}
 	}
 	
 	public int getAction(Object caller) {
 		if (caller instanceof Duel) //duel is calling it
 		{
-			if(loadedGun == true && Math.random() < .5) //is gun loaded? and 50% chance
+			if( loadedGun == true && Math.random() < .5) //is gun loaded? and 50% chance
 			{
 				loadedGun = false; //shoot the gun then it unloads
 				return Duel.SHOOTING;
@@ -64,11 +68,13 @@ public class CharacterB implements Dueler{
 		else
 		{
 			return Duel.YEAH_RIGHT;
-			return int (Math.random()*3); //random move
+			
+			
+			
 		}
 		
 	}
-	public int hit(Object caller) {
+	public void hit(Object caller) {
 		if(caller instanceof Duel)
 		{
 			this.hp = this.hp - 10;

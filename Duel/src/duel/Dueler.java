@@ -1,7 +1,7 @@
 package duel;
 
 
-//period 4
+
 
 public interface Dueler {
 
