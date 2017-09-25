@@ -3,8 +3,9 @@ package duel;
 public class CharacterA implements Dueler {
 	
 	private String name;
-	private String taunt;
+	//private String taunt;
 	private boolean loadedGun;
+	private int hp;
 	private String tauntArray[] = {"Can't defeat me.", "Try again!", "You're too weak.", 
 	"Why don't you try something else?"};
 	
@@ -14,11 +15,11 @@ public class CharacterA implements Dueler {
 	
 	}
 	
-	static int randomNum = Math.random()*4;
 	
 	public void taunt() {
-		
-		return tauntArray[randomNum];
+		int randomNum = (int) (Math.random()*4);
+		String t = tauntArray[randomNum];
+		System.out.println(t);
 	}
 
 	
@@ -36,9 +37,13 @@ public class CharacterA implements Dueler {
 	}
 
 	public boolean determineIfOpponentIsFair (Dueler d, int hp) {
-		if (d.getHp == hp)
+		if (d.getHP() == hp)
 		{
 			return true; 
+		}
+		else 
+		{
+			return false;
 		}
 	}
 	
@@ -69,11 +74,11 @@ public class CharacterA implements Dueler {
 		else
 		{
 			return Duel.YEAH_RIGHT;
-			return int (Math.random()*3); //random move
+			
 		}
 	}
 	
-	public int hit(Object caller) {
+	public void hit(Object caller) {
 		if(caller instanceof Duel)
 		{
 			this.hp = this.hp - 10;
