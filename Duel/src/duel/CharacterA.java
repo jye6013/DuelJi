@@ -1,17 +1,23 @@
 package duel;
 
+
 public class CharacterA implements Dueler { 
+
 	
 	private String name;
+
 	//private String taunt;
 	private boolean loadedGun;
 	private int hp;
+
+	private String taunt;
+
+
 	private String tauntArray[] = {"Can't defeat me.", "Try again!", "You're too weak.", 
 	"Why don't you try something else?"};
+
 	
 	public CharacterA() {
-
-		
 	
 	}
 	
@@ -74,7 +80,8 @@ public class CharacterA implements Dueler {
 		else
 		{
 			return Duel.YEAH_RIGHT;
-			
+
+		
 		}
 	}
 	
